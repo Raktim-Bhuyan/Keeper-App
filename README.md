@@ -1,4 +1,6 @@
-# Keeper-App
-Minimalist Clone of Google Keep.
-About Google Keep :
-Google Keep is a note-taking and productivity application developed by Google. It allows users to create and organize notes, lists, and reminders across multiple devices, such as smartphones, tablets, and computers.
+# Notes Keeper App
+This is a Google Keep inspired, Notes keeping app. The best part? All the notes you save are kept locally on your computer! using your browser's LocalStorage.
+
+So, no more worrying about giving access to your secrets to 3rd-party companies.
+
+Built in React.js with ❤️
