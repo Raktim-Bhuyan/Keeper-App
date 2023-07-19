@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Header  from './Header';
 import Footer from './Footer';
 import Note from './Note';
 import notes from '../notes'
 import CreateArea from './CreateArea';
 
+const getLocalItems = () =>{
+  let items = localStorage.getItem('notes');
+  if(items){
+    return JSON.parse(localStorage.getItem('notes'));
+  }
+  else{
+    return [];
+  }
+}
+
 function App() {
-  const [notes,setNotes] = useState([]);
+  const [notes,setNotes] = useState(getLocalItems());
 
   function addNote(note){
     setNotes(prevValue =>{
@@ -20,6 +30,9 @@ function App() {
       })
     })
   }
+  useEffect(()=>{
+    localStorage.setItem('notes',JSON.stringify(notes))},[notes])
+  
   return (
     <div >
       <Header/>

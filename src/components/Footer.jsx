@@ -2,8 +2,8 @@ import React from 'react';
 
 function Footer(){
     
-    return <footer><p >
+    return (<div> <footer><p >
         Copyright © {new Date().getFullYear()}
-    </p></footer>
+    </p></footer> </div>);
 }
 export default Footer;
