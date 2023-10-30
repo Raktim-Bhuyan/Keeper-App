@@ -34,10 +34,12 @@ function App() {
     localStorage.setItem('notes',JSON.stringify(notes))},[notes])
   
   return (
+    <>
     <div >
       <Header/>
       <CreateArea onAdd = {addNote} />
       {/* <Note key={1} title="Note title" content="Note content" /> */}
+      <div className='grid'>
       {notes.map((noteItem,idx) =>{
         return (<Note
           key = {idx}
@@ -49,8 +51,12 @@ function App() {
 
         
       })}
-      <Footer/>
+      </div>
+      
+      
+    <Footer/>
     </div>
+    </>
   );
 }
 
